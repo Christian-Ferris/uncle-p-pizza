@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Uncle P's Pizza</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container w-75" id="content">
+    <div class="bs-example">
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a href="#pizza" class="nav-link active" data-toggle="tab">Create Your Pizza</a>
+            </li>
+            <li class="nav-item">
+                <a href="#info" class="nav-link" data-toggle="tab">Customer Info</a>
+            </li>
+            <li class="nav-item">
+                <a href="#order" class="nav-link" data-toggle="tab">Order Detail</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="pizza">
+                <div class="h1-padding">
+                    <h1>Uncle P's Pizza</h1>
+                </div>
+                <h2 class="mt-2"><u>Create Your Pizza</u></h2>
+                <form id="formPizza">
+                    <fieldset>
+                        <legend>Size</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="size" id="small" value="7" checked>
+                                    <label for="small">Small - $7</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="size" id="medium" value="9">
+                                    <label for="medium">Medium - $9</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="size" id="large" value="12">
+                                    <label for="large">Large - $12</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Crust</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="crust" id="thin" value="thin" checked>
+                                    <label for="thin">Thin</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="crust" id="pan" value="pan">
+                                    <label for="pan">Pan</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="radio" name="crust" id="glutenFree" value="gluten free">
+                                    <label for="glutenFree">Gluten Free</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Meats - $1.50 each</legend>
+                        <table class="checkboxes">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="meats" id="pepperoni" value="1.50">
+                                    <label for="pepperoni">Pepperoni</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="meats" id="sausage" value="1.50">
+                                    <label for="sausage">Sausage</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="meats" id="bacon" value="1.50">
+                                    <label for="bacon">Bacon</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="meats" id="chicken" value="1.50">
+                                    <label for="chicken">Chicken</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="meats" id="ham" value="1.50">
+                                    <label for="ham">Ham</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Vegetables - $1.00 each</legend>
+                        <table class="checkboxes">
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="onions" value="1.00">
+                                    <label for="onions">Onions</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="greenPeppers" value="1.00">
+                                    <label for="greenPeppers">Green Peppers</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="tomatoes" value="1.00">
+                                    <label for="tomatoes">Tomatoes</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="olives" value="1.00">
+                                    <label for="olives">Olives</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="mushrooms" value="1.00">
+                                    <label for="mushrooms">Mushrooms</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="pineapple" value="1.00">
+                                    <label for="pineapple">Pineapples</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="jalapenos" value="1.00">
+                                    <label for="jalapenos">Jalapenos</label>
+                                </td>
+                                <td>
+                                    <input type="checkbox" name="veggies" id="spinach" value="1.00">
+                                    <label for="spinach">Spinach</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+                <p>Click the next tab to continue</p>
+            </div>
+            <div class="tab-pane fade" id="info">
+                <div class="h1-padding">
+                    <h1>Uncle P's Pizza</h1>
+                </div>
+                <h2 class="mt-2"><u>Customer Info</u></h2>
+
+                <form id="formInfo">
+                    <fieldset>
+                        <legend>Contact Information</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="phone">Phone Number:</label>
+                                    <input type="number" name="phone" id="phone" placeholder="(xxx) xxx-xxxx">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Delivery Information</legend>
+                        <table>
+                            <tr>
+                                <td>
+                                    <label for="address">Address:</label>
+                                    <input type="text" name="address" id="address" placeholder="Address">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="city">City:</label>
+                                    <input type="text" name="city" id="city" placeholder="City">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="state">State:</label>
+                                    <input type="text" name="state" id="state" placeholder="State">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="zip">Zip Code:</label>
+                                    <input type="text" name="zip" id="zip" placeholder="Zip Code">
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                    <button class="btn btn-danger">Order</button>
+                </form>
+            </div>
+
+
+
+            <div class="tab-pane fade" id="order">
+                <div class="h1-padding">
+                    <h1>Uncle P's Pizza</h1>
+                </div>
+                <h2 class="mt-2"><u>Order Review</u></h2>
+                <table>
+                    <tr>
+                        <td>
+                            First Name:
+                        </td>
+                        <td>
+                            <p id="firstNameDisplay"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Last Name:
+                        </td>
+                        <td>
+                            <p id="lastNameDisplay"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Phone Number:
+                        </td>
+                        <td>
+                            <p id="phoneDisplay"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Address:
+                        </td>
+                        <td>
+                            <p id="addressDisplay"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Zip Code:
+                        </td>
+                        <td>
+                            <p id="zipDisplay"></p>
+                        </td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <td>
+                            Order Description:
+                        </td>
+                        <td>
+                            <p id="orderDesc"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Subtotal:
+                        </td>
+                        <td>
+                            <p id="subtotal"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tax:
+                        </td>
+                        <td>
+                            <p id="taxDisplay"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Order Total:
+                        </td>
+                        <td>
+                            <p id="orderTotal"></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="code.js"></script>
+</html>

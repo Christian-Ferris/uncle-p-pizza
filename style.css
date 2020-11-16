@@ -1,0 +1,75 @@
+#content {
+    padding-top: 20px;
+    background-color: rgba(255, 255, 255, 0.92);
+}
+
+body {
+    background-image: url("vitalii-chernopyskyi-Oxb84ENcFfU-unsplash.jpg");
+    background-size: 1920px;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    text-shadow: 1px 1px rgba(255, 0, 0, 0.5);
+    border: forestgreen solid 1px;
+    font-size: 300%;
+}
+
+.h1-padding {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+.nav-tabs > li > a {
+    color: red;
+}
+
+.tab-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    font-style: italic;
+}
+
+fieldset {
+    margin-top: 20px;
+}
+
+.checkboxes {
+    margin-left: -15px;
+}
+
+input[type=checkbox] {
+    margin-left: 15px;
+}
+
+input[type=text] {
+    margin-left: 15px;
+}
+
+input[type=number] {
+    margin-left: 15px;
+}
+
+p {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 150%;
+}
+
+#info {
+    padding-bottom: 50px;
+}
+
+input [type=submit] {
+    margin-top: 30px;
+}
+
