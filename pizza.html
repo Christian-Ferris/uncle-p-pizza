@@ -34,19 +34,19 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="radio" name="size" id="small" value="7" checked>
+                                    <input type="radio" name="size" id="small" data-price="7" data-size="small" checked>
                                     <label for="small">Small - $7</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" name="size" id="medium" value="9">
+                                    <input type="radio" name="size" id="medium" data-price="9" data-size="medium">
                                     <label for="medium">Medium - $9</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" name="size" id="large" value="12">
+                                    <input type="radio" name="size" id="large" data-price="12" data-size="large">
                                     <label for="large">Large - $12</label>
                                 </td>
                             </tr>
@@ -57,19 +57,19 @@
                         <table>
                             <tr>
                                 <td>
-                                    <input type="radio" name="crust" id="thin" value="thin" checked>
+                                    <input type="radio" name="crust" id="thin" data-crust="thin" checked>
                                     <label for="thin">Thin</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" name="crust" id="pan" value="pan">
+                                    <input type="radio" name="crust" id="pan" data-crust="pan">
                                     <label for="pan">Pan</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="radio" name="crust" id="glutenFree" value="gluten free">
+                                    <input type="radio" name="crust" id="glutenFree" data-crust="gluten free">
                                     <label for="glutenFree">Gluten Free</label>
                                 </td>
                             </tr>
@@ -80,25 +80,25 @@
                         <table class="checkboxes">
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="meats" id="pepperoni" value="1.50">
+                                    <input type="checkbox" name="meats" id="pepperoni" value="Pepperoni" data-price="1.5">
                                     <label for="pepperoni">Pepperoni</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="meats" id="sausage" value="1.50">
+                                    <input type="checkbox" name="meats" id="sausage" value="Sausage" data-price="1.5">
                                     <label for="sausage">Sausage</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="meats" id="bacon" value="1.50">
+                                    <input type="checkbox" name="meats" id="bacon" value="Bacon" data-price="1.5">
                                     <label for="bacon">Bacon</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="meats" id="chicken" value="1.50">
+                                    <input type="checkbox" name="meats" id="chicken" value="Chicken" data-price="1.5">
                                     <label for="chicken">Chicken</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="meats" id="ham" value="1.50">
+                                    <input type="checkbox" name="meats" id="ham" value="Ham" data-price="1.5">
                                     <label for="ham">Ham</label>
                                 </td>
                             </tr>
@@ -109,44 +109,44 @@
                         <table class="checkboxes">
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="onions" value="1.00">
+                                    <input type="checkbox" name="veggies" id="onions" value="Onions" data-price="1">
                                     <label for="onions">Onions</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="greenPeppers" value="1.00">
+                                    <input type="checkbox" name="veggies" id="greenPeppers" value="Green peppers" data-price="1">
                                     <label for="greenPeppers">Green Peppers</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="tomatoes" value="1.00">
+                                    <input type="checkbox" name="veggies" id="tomatoes" value="Tomatoes" data-price="1">
                                     <label for="tomatoes">Tomatoes</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="olives" value="1.00">
+                                    <input type="checkbox" name="veggies" id="olives" value="Olives" data-price="1">
                                     <label for="olives">Olives</label>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="mushrooms" value="1.00">
+                                    <input type="checkbox" name="veggies" id="mushrooms" value="Mushrooms" data-price="1">
                                     <label for="mushrooms">Mushrooms</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="pineapple" value="1.00">
+                                    <input type="checkbox" name="veggies" id="pineapple" value="Pineapple" data-price="1">
                                     <label for="pineapple">Pineapples</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="jalapenos" value="1.00">
+                                    <input type="checkbox" name="veggies" id="jalapenos" value="Jalapenos" data-price="1">
                                     <label for="jalapenos">Jalapenos</label>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="veggies" id="spinach" value="1.00">
+                                    <input type="checkbox" name="veggies" id="spinach" value="Spinach" data-price="1">
                                     <label for="spinach">Spinach</label>
                                 </td>
                             </tr>
                         </table>
                     </fieldset>
                 </form>
-                <p>Click the next tab to continue</p>
+                <p class="nextTab">Click the next tab to continue</p>
             </div>
             <div class="tab-pane fade" id="info">
                 <div class="h1-padding">
@@ -207,8 +207,9 @@
                             </tr>
                         </table>
                     </fieldset>
-                    <button class="btn btn-danger">Order</button>
+                    <button id="button" class="btn btn-danger">Order</button>
                 </form>
+                <p class="nextTab">Click the next tab after you order</p>
             </div>
 
 
@@ -218,6 +219,7 @@
                     <h1>Uncle P's Pizza</h1>
                 </div>
                 <h2 class="mt-2"><u>Order Review</u></h2>
+                <h5><b>Customer Info</b></h5>
                 <table>
                     <tr>
                         <td>
@@ -260,11 +262,13 @@
                         </td>
                     </tr>
                 </table>
+                <br>
 
+                <h5><b>Order Description</b></h5>
                 <table>
                     <tr>
                         <td>
-                            Order Description:
+                            Pizza:
                         </td>
                         <td>
                             <p id="orderDesc"></p>
@@ -272,29 +276,60 @@
                     </tr>
                     <tr>
                         <td>
-                            Subtotal:
+                            Meats:
                         </td>
                         <td>
-                            <p id="subtotal"></p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Tax:
-                        </td>
-                        <td>
-                            <p id="taxDisplay"></p>
+                            <p id="meatDisplay"></p>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            Order Total:
+                            Veggies:
                         </td>
                         <td>
-                            <p id="orderTotal"></p>
+                            <p id="veggieDisplay"></p>
                         </td>
                     </tr>
                 </table>
+                <br>
+
+                <div id="bottomPadding">
+                    <h5><b>Order Cost</b></h5>
+                    <table>
+                        <tr>
+                            <td>
+                                Subtotal:
+                            </td>
+                            <td>
+                                <p id="subtotal"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Tax:
+                            </td>
+                            <td>
+                                <p id="taxDisplay"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Delivery Fee:
+                            </td>
+                            <td>
+                                <p id="deliveryDisplay"></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Order Total:
+                            </td>
+                            <td>
+                                <p id="orderTotal"></p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </div>

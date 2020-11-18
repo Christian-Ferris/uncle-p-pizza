@@ -1,34 +1,81 @@
 $(document).ready(function () {
 
-    $("size","crust","meats","veggies").change(calculatePizza);
+    $("#formPizza input").change(calculatePizza);
 
     function calculatePizza()
     {
-        var size = $("size").checked();
-        size = parseFloat(size);
-        var crust = $("crust").checked();
-        crust = parseFloat(crust);
-        var meatNum = $("meats").checked();
-        meatNum = parseFloat(meatNum);
-        var veggieNum = $("veggies").checked();
-        veggieNum = parseFloat(veggieNum);
+        // Ask jquery for the selected size
+        var size = $("input[name=size]:checked");
+        // Get the string value of size
+        var displaySize = size.data("size");
+        // Get the price of size
+        var sizePrice = size.data("price")
 
-        var pizzaSubtotal = size + meatNum + veggieNum;
-        var pizzaSubtotalDisplay = pizzaSubtotal.toFixed(2);
+        // Ask jquery for the selected crust
+        var crust = $("input[name=crust]:checked");
+        // Get value of selected
+        var crustDisplay = crust.data("crust");
 
-        var tax = pizzaSubtotal * 0.051;
+        // Create variables for meat and veggies
+        var meats = "";
+        var veggies = "";
+
+        // Ask jquery for all of the selected boxes for both meat and veggies
+        var selectedMeats = $("input[name=meats]:checked");
+        var selectedVeggies = $("input[name=veggies]:checked");
+
+        // Make global variable to track total meat cost
+        var totalMeatCost = 0;
+        // Function to run for each meat selected
+        selectedMeats.each(function ()
+            {
+                // Get the price value for each meat
+                totalMeatCost += $(this).data("price");
+                // Get all of the meat toppings listed for the order display
+                meats += $(this).val();
+                meats += "<br>";
+            }
+        );
+
+        // Do the same for veggies
+        var totalVeggieCost = 0;
+        selectedVeggies.each(function ()
+            {
+                // Get the price value for each meat
+                totalVeggieCost += $(this).data("price");
+                // Get all of the meat toppings listed for the order display
+                veggies += $(this).val();
+                veggies += "<br>";
+            }
+        );
+
+        // Calculate subtotal of the pizza
+        var subtotal = sizePrice + totalMeatCost + totalVeggieCost;
+        var subtotalDisplay = subtotal.toFixed(2);
+
+        // Get the calculated tax
+        var tax = subtotal * 0.051;
         var taxDisplay = tax.toFixed(2);
+
+        // Delivery fee
         var deliveryFee = 2;
+        var deliveryFeeDisplay = "$2.00";
 
-        var orderDesc = "1 " + crust + " style pizza with " + meatNum + " and " + veggieNum;
+        // Order description
+        var orderDesc = "1 " + displaySize + ", " + crustDisplay + " style pizza"
 
-        var total = pizzaSubtotal + tax + deliveryFee;
-        var grandTotal = total.toFixed(2);
+        // Calculate the grand total
+        var grandTotal = subtotal + tax + deliveryFee;
+        var grandTotalDisplay = grandTotal.toFixed(2);
 
+        // Display All values
         $("#orderDesc").text(orderDesc);
-        $("#subtotal").text(pizzaSubtotalDisplay);
-        $("#taxDisplay").text(taxDisplay);
-        $("#orderTotal").text("$"+grandTotal);
+        $("#meatDisplay").html(meats);
+        $("#veggieDisplay").html(veggies);
+        $("#subtotal").text("$"+subtotalDisplay);
+        $("#taxDisplay").text("$"+taxDisplay);
+        $("#deliveryDisplay").text(deliveryFeeDisplay);
+        $("#orderTotal").text("$"+grandTotalDisplay);
     }
 
 
@@ -45,12 +92,14 @@ $(document).ready(function () {
             phone: {
                 required: true,
                 digits: true,
-                phoneUS: true
             },
             address: {
                 required: true
             },
             city: {
+                required: true
+            },
+            state: {
                 required: true
             },
             zip: {
@@ -78,6 +127,9 @@ $(document).ready(function () {
             city: {
                 required: "Please enter a city"
             },
+            state: {
+                required: "Please enter a state"
+            },
             zip: {
                 required: "Please enter a zip code"
             }
@@ -86,13 +138,14 @@ $(document).ready(function () {
 
     // Pass the configuration to the form's validate() method
     // Needs submitHandler, rules, and messages properties
-    $("form").validate(
+    $("#formInfo").validate(
         {
             submitHandler: runMyProgram,
             rules: rules,
             messages: messages
         }
     );
+
 
 
     function runMyProgram() {
